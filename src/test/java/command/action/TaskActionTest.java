@@ -124,13 +124,13 @@ class TaskActionTest {
     @Test
     public void actUndone_indexInList_undoneResponseMessage() {
         duke.testSut("clear", true, true);
-        duke.testSut("deadline watch Spongebob round pants s3 /by 22-01-2001 12:00", false, false);
+        duke.testSut("deadline watch Spongebob roundpants s3 /by 22-01-2001 12:00", false, false);
         duke.testSut("todo eat banana while watching Minions s4", false, false);
         duke.testSut("event Tinder meetingg!! /at THE END OF TIME TT", false, false);
         duke.testSut("done 1", false, false);//mark first item as done
 
         String expectedOutput = "Nice! I've marked this task as undone:\r\n"
-            + "[D][X] watch Spongebob round pants s3 (by: Jan 22 2001 12:00)";
+            + "[D][X] watch Spongebob roundpants s3 (by: Jan 22 2001 12:00)";
         String testCustomInputsCommand = "undone 1";
         assertAll("Mark undone",
             () -> assertEquals(expectedOutput, duke.testSut(testCustomInputsCommand, false, true),
