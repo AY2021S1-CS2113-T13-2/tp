@@ -16,6 +16,7 @@
     * [`fancy` - Switch the UI to the fancy mode (GUI-like CLI)](#fancy---Switch-the-UI-to-the-fancy-mode-(GUI-like-CLI))
     * [`find` - Find an event in the task list](#find---Find-an-event-in-the-task-list)
     * [`focus` - Change the context of the program](#focus---Change-the-context-of-the-program) 
+    * [`grade` - Add grade to course or module](#grade---Add-grade-to-course-or-module) 
     * [`help` - Print help text of the commands](#help---Print-help-text-of-the-commands)
     * [`list` - Print a list of added tasks](#list---Print-a-list-of-added-tasks)
     * [`mc` - Prints MCs](#mc---Prints-MCs)
@@ -409,6 +410,46 @@ Expected outcome:
     task
     ____________________________________________________________
    ```
+
+### `grade` - Add grade to course or module
+
+Typing `grade` allows the user to add grade to the user's taken course or module.
+
+Syntax:
+
+`grade`
+`grade [-option] [module] [grade] {[module] [grade]...}` <br>
+
+`option: -s(show, default), -a(add)`
+
+Example of usage:
+
+`grade -a CS2113 A- CG1112 A-`
+
+Expected outcome:
+    ```
+    ____________________________________________________________
+        These are your grades so far:
+        1. CS2113   A-
+        2. CG1112   A-
+    ____________________________________________________________
+    ```
+Example of usage:
+
+`grade`
+
+Expected outcome:
+    ```
+    ____________________________________________________________
+        These are your grades so far:
+        1. CG1112   A-
+        2. CS1010   A
+        3. CS1231   B
+        4. CS2040C  A
+        5. CS2113   A-
+    ____________________________________________________________
+    ```
+
 
 ### `help` - Print help text of the commands
 
@@ -878,6 +919,7 @@ A cheat sheet of commonly used commands:
 **fancy**|`fancy [option]` <br>e.g. `fancy`
 **find**|`find [keyword]` <br>e.g. `find exam`
 **focus**|`focus [deadline / todo / event / task / mod / selected / taken]` <br>e.g. `focus deadline`
+**grade**|`grade [-option] [module] [grade] {[module] [grade]...}`<br>e.g. `grade -a CS2113 A CG1112 A-`  
 **help**|`help [options]` <br>e.g. `help deadline`
 **list**|`list date [asc / desc / spec “date”]` <br>e.g. `list date asc`
 **mc**|`mc [-option] [-details]` <br>e.g. `mc -p`
