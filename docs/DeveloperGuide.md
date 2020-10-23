@@ -68,6 +68,9 @@ Once CI processed the user input, duke proceeds to redirect the input to Execute
 **1.5 Storage Layer**<br>
 Once CI processed the user input, duke proceeds to redirect the input to Execute for execution of action. 
 
+**1.6 Flow of DOMSUM**<br>
+The sequence diagram below shows the main interaction of classes with each other throughout the whole lifecycle of DOMSUM.
+![uml](Images/DOMSUM_Main_Flow.png)
 
 ## 4. Implementation<br>
 This section highlights some of our project's key feature and its implementation. 
