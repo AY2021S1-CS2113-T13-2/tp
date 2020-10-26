@@ -17,8 +17,8 @@ import java.util.Map;
  */
 public class GradeAction extends TakeAction {
 
-    private HashMap<String, String> modulesWithGrades = new HashMap<>();
-    private String option;
+    protected HashMap<String, String> modulesWithGrades = new HashMap<>();
+    protected String option;
 
     @Override
     public String act(Data data) throws Exception {

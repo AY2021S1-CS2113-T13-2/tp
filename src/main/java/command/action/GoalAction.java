@@ -12,9 +12,9 @@ import java.text.DecimalFormat;
  */
 public class GoalAction extends CalculateCapAction {
 
-    private String option;
-    private double targetCAP;
-    private double mcGraduate;
+    String option;
+    double targetCAP;
+    double mcGraduate;
 
     @Override
     public String act(Data data) throws Exception {

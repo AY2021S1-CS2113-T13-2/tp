@@ -28,10 +28,6 @@ public class Data {
      */
     public ArrayList<Item> tasks;
     /**
-     * The list of taken modules read in from course.txt.
-     */
-    public ArrayList<Item> takenCourses;
-    /**
      * The default list of modules read in from finalcourselist.txt.
      */
     public ArrayList<Item> mods;

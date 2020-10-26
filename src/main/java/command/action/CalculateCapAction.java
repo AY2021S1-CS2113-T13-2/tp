@@ -20,8 +20,8 @@ import java.util.Map;
  */
 public class CalculateCapAction extends Action {
 
-    private HashMap<String, Double> modulesWithGrades = new HashMap<>();
-    private String option;
+    protected HashMap<String, Double> modulesWithGrades = new HashMap<>();
+    protected String option;
     protected double totalScore = 0;
     protected double totalMC = 0;
 
