@@ -125,9 +125,9 @@ public class Duke {
         // However, no matter what mode it starts in, I have created switching commands.
         // you can use "fancy" command to switch to fancyCli, and use "plain" command to switch to plain Cli.
         // [AFTER READING THE ABOVE TEXT, PLEASE UNCOMMENT THE FOLLOWING 2 LINES TO RUN THE PROGRAM]
-        boolean isWindows = System.getProperty("os.name").toLowerCase().contains("win");
-        new Duke(!isWindows, System.out, System.in, Constants.PATH,
-         Constants.TASK_FILENAME, Constants.COURSE_FILENAME).run();
+        // boolean isWindows = System.getProperty("os.name").toLowerCase().contains("win");
+         //new Duke(!isWindows, System.out, System.in, Constants.PATH,
+         //Constants.TASK_FILENAME, Constants.COURSE_FILENAME).run();
     }
 
     private void reattachUI(boolean isFancy, boolean isPlain) {

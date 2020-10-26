@@ -70,7 +70,7 @@ Once CI processed the user input, duke proceeds to redirect the input to Execute
 
 **1.6 Flow of DOMSUM**<br>
 The sequence diagram below shows the main interaction of classes with each other throughout the whole lifecycle of DOMSUM.
-![uml](DOMSUM_Main_Flow.png)
+![uml](Images/DOMSUM_Main_Flow.png)
 
 ## 4. Implementation<br>
 This section highlights some of our project's key feature and its implementation. 

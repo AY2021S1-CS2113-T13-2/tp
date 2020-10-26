@@ -12,7 +12,7 @@ public class DataDummy extends Data {
 
     ModuleParser moduleloader = new ModuleParser();
 
-    public DataDummy(){
+    public DataDummy() {
         super();
         lastInput = "";
         lastIndexOption = MessageOptions.NOT_INDEXED;

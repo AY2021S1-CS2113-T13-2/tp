@@ -14,12 +14,12 @@ class CalculateCapActionTest {
 
     @Test
     public void act_customModuleInputs_calculatedCapValue() throws Exception {
-        String expectedOutput = "Here is your existing CAP: 3.9";
         CalculateCapAction action = new CalculateCapAction();
         action.modulesWithGrades.put("CS1231", 5.0);
         action.modulesWithGrades.put("MA1511", 3.5);
         action.modulesWithGrades.put("CS2040C", 3.0);
         action.option = "m";
+        String expectedOutput = "Here is your existing CAP: 3.9";
         assertEquals(expectedOutput, action.act(dataTest), "Calculate CAP custom input fails");
     }
 

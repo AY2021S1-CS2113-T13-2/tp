@@ -23,8 +23,10 @@
     * [`next` - Switch the target region to the next page ***(GUI mode only)***](#next---Switch-the-target-region-to-the-next-page)
     * [`plain` - Switch the UI to the plain mode (pure-text CLI)](#plain---Switch-the-UI-to-the-plain-mode-(pure-text-CLI))
     * [`prev` - Switch the target region to the previous page ***(GUI mode only)***](#prev---Switch-the-target-region-to-the-previous-page)
+    * [`postpone` - Postpone a task to a later date](#postpone---Postpone-a-task-to-a-later-date)
     * [`reminder` - Print tasks that are due soon](#reminder---Print-tasks-that-are-due-soon)
     * [`sel` - Select items by index](#sel---Select-items-by-index)
+    * [`snooze` - Delays reminder popup](#snooze---Delays-reminder-popup)
     * [`take` - Take module(s)](#take---Take-module)
     * [`todo` - Add a todo to the task list](#todo---Add-a-todo-to-the-task-list)
     * [`undone` - Mark a task as undone](#undone---Mark-a-task-as-undone)
@@ -689,6 +691,67 @@ Expected outcome ***(GUI mode only)***:
 
 The item list region (top) of the GUI is switched to the previous page if a previous page is available.
 
+### `postpone` - Postpone a task by index
+
+Typing `postpone` delays a task specified by the user or by default a day
+
+Syntax:
+
+`postpone [index]`
+`postpone [h/w/y] [index]` 
+
+Example of usage:
+
+`postpone 1`
+
+Expected outcome:
+ 
+    ```
+    ____________________________________________________________
+        I've postpone this task:
+        [D][X] project submission (by: Sep 16 2021 01:12)
+    ____________________________________________________________
+    ```
+
+Example of usage:
+
+`postpone h 1`
+
+Expected outcome:
+    
+    ```
+    ____________________________________________________________
+        I've postpone this task:
+        [D][X] project submission (by: Sep 16 2021 02:12)
+    ____________________________________________________________
+    ```
+
+Example of usage:
+
+`postpone w 1`
+
+Expected outcome:
+
+    ```
+    ____________________________________________________________
+        I've postpone this task:
+        [D][X] project submission (by: Sep 23 2021 02:12)
+    ____________________________________________________________
+    ```
+
+Example of usage:
+
+`postpone y 1`
+
+Expected outcome:
+
+    ```
+    ____________________________________________________________
+        I've postpone this task:
+        [D][X] project submission (by: Sep 23 2022 02:12)
+    ____________________________________________________________
+    ```
+
 ### `reminder` - Print tasks that are due soon
 
 Typing `reminder` prints the tasks that are due within a certain time range. 
@@ -732,6 +795,27 @@ Expected outcome:
     Item 3: jumping
     ____________________________________________________________
    ```
+
+### `snooze` - Delays reminder popup
+
+Typing `snooze` delays reminder popup by a default of 30 seconds
+
+Syntax:
+
+`snooze`
+
+Example of usage:
+
+`snooze`
+
+Expected outcome:
+
+    ```
+    ____________________________________________________________
+        I've snoozed the reminder for 30 seconds.
+    ____________________________________________________________    
+    ```
+
 
 ### `take` - Take module
 
@@ -926,8 +1010,10 @@ A cheat sheet of commonly used commands:
 **next**|`next [option]` <br>e.g. `next`
 **plain**|`plain [option]` <br>e.g. `plain`
 **prev**|`prev [option]` <br>e.g. `prev`
+**postpone**| `postpone [index]` <br>e.g. `postpone 1`
 **reminder**|`reminder` <br>e.g. `reminder`
 **sel**|`sel [index / module code]` <br>e.g. `sel 1 2 3`
+**snooze**|`snooze`
 **take**|`take [index / module code]` <br>e.g. `take CS2113T`
 **todo**|`todo [description]` <br>e.g. `todo borrow book`
 **undone**|`undone [index]` <br>e.g. `undone 2`

@@ -8,17 +8,17 @@ import exceptions.CommandException;
 import java.text.DecimalFormat;
 
 /**
- * Goal planner function
+ * Goal planner function.
  */
 public class GoalAction extends CalculateCapAction {
 
     String option;
-    double targetCAP;
+    double targetCap;
     double mcGraduate;
 
     @Override
     public String act(Data data) throws Exception {
-        double totalScoreGoal = mcGraduate * targetCAP;
+        double totalScoreGoal = mcGraduate * targetCap;
         if (option.equals("u")) {
             checkCalculateCap(data);
         }
@@ -46,14 +46,14 @@ public class GoalAction extends CalculateCapAction {
         option = currData.name;
 
         mcGraduate = Integer.parseInt(currData.thisData.name);
-        targetCAP = Double.parseDouble(currData.thisData.thisData.name);
+        targetCap = Double.parseDouble(currData.thisData.thisData.name);
 
         //input custom mc and cap
         if (option.equals("c")) {
             currData = currData.thisData.thisData;
             totalMC = Double.parseDouble(currData.thisData.name);
-            double currentCAP = Double.parseDouble(currData.thisData.thisData.name);
-            totalScore = currentCAP * totalMC;
+            double currentCap = Double.parseDouble(currData.thisData.thisData.name);
+            totalScore = currentCap * totalMC;
         } else if (option.equals("u")) {
             //do nothing
         } else {

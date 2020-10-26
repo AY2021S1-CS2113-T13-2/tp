@@ -96,7 +96,7 @@ public enum HelpText {
             "2. \"detail CS2113T\" >> print the detail of module CS2113T",
         }),
     /**
-     * Goal Planner
+     * Goal Planner.
      */
     GOAL(
         "goal",
@@ -107,10 +107,10 @@ public enum HelpText {
         },
         new String[]{
             "1. \"goal -u 160 4.9\" >> comment on required average grade to achieve CAP of 4.9 with 160MC in total",
-            "2. \"goal -c 160 4.9 100 4.5\" >> " +
-                "comment on required average grade to achieve CAP of 4.9 with:\r\n" +
-                "- MC total for graduation: 160\r\n" + "- Target CAP: 4.9\r\n" +
-                "- MC taken: 100\r\n" + "- Current CAP: 4.5\r\n"
+            "2. \"goal -c 160 4.9 100 4.5\" >> "
+                + "comment on required average grade to achieve CAP of 4.9 with:\r\n"
+                + "- MC total for graduation: 160\r\n" + "- Target CAP: 4.9\r\n"
+                + "- MC taken: 100\r\n" + "- Current CAP: 4.5\r\n"
         }),
     /**
      * The Done.
@@ -295,55 +295,67 @@ public enum HelpText {
      * The Reminder.
      */
     REMINDER(
-            "reminder",
-            "List out events and deadlines tasks that are due within " + Constants.REMINDER_RANGE + " days",
-            new String[]{
-                "reminder"
-            },
-            new String[]{
-                "1. \"reminder\" >> list tasks that are due within the set period of time"
-            }),
+        "reminder",
+        "List out events and deadlines tasks that are due within " + Constants.REMINDER_RANGE + " days",
+        new String[]{
+            "reminder"
+        },
+        new String[]{
+            "1. \"reminder\" >> list tasks that are due within the set period of time"
+        }),
     /**
      * The Sel.
      */
     SEL(
-            "sel",
-            "Make selection: Add specified item(s) to the selection.",
-            new String[]{
-                "sel [index(es) (for the currently listed items) / module code(s) (for modules only)]",
-            },
-            new String[]{
-                "1. \"sel 1 2 3\" >> add the item with indices 1, 2and 3 from the item list to the selection",
-                "2. \"sel CS1010 CS2113\" >> add the modules CS1010 and CS2113 on the item list to the selection",
-                "3. \"sel 5 CS2113\" >> add the item with index 5 and module CS2113 on the item list to the selection"
-            }),
+        "sel",
+        "Make selection: Add specified item(s) to the selection.",
+        new String[]{
+            "sel [index(es) (for the currently listed items) / module code(s) (for modules only)]",
+        },
+        new String[]{
+            "1. \"sel 1 2 3\" >> add the item with indices 1, 2and 3 from the item list to the selection",
+            "2. \"sel CS1010 CS2113\" >> add the modules CS1010 and CS2113 on the item list to the selection",
+            "3. \"sel 5 CS2113\" >> add the item with index 5 and module CS2113 on the item list to the selection"
+        }),
+    /**
+     * The Snooze.
+     */
+    SNOOZE(
+        "snooze",
+        "Delay the reminder pop up by 30 seconds.",
+        new String[]{
+            "snooze",
+        },
+        new String[]{
+            "1. \"snooze\" >> Delay reminder popup by 30 seconds"
+        }),
     /**
      * The Take.
      */
     TAKE(
-            "take",
-            "Take module(s): Mark specified module(s) as taken.",
-            new String[]{
-                "take [index(es) / module code(s) (for modules only)]",
-            },
-            new String[]{
-                "1. \"take\" >> if there is any module selected but not taken, mark it as taken",
-                "2. \"take 1 2\" >> mark module 1 and module 2 as taken",
-                "3. \"take CS2113T\" >> mark module CS2113T as taken",
-                "4. \"take 1 2 CS2113T\" >> mark module 1, module 2 and module CS2113T as taken",
-            }),
+        "take",
+        "Take module(s): Mark specified module(s) as taken.",
+        new String[]{
+            "take [index(es) / module code(s) (for modules only)]",
+        },
+        new String[]{
+            "1. \"take\" >> if there is any module selected but not taken, mark it as taken",
+            "2. \"take 1 2\" >> mark module 1 and module 2 as taken",
+            "3. \"take CS2113T\" >> mark module CS2113T as taken",
+            "4. \"take 1 2 CS2113T\" >> mark module 1, module 2 and module CS2113T as taken",
+        }),
     /**
      * The Todo.
      */
     TODO(
-            "todo",
-            "Add a todo to the task list",
-            new String[]{
-                "todo [description]"
-            },
-            new String[]{
-                "1. \"todo class\" >> adds a todo with description \"class\""
-            }),
+        "todo",
+        "Add a todo to the task list",
+        new String[]{
+            "todo [description]"
+        },
+        new String[]{
+            "1. \"todo class\" >> adds a todo with description \"class\""
+        }),
     /**
      * The Undone.
      */
@@ -372,32 +384,40 @@ public enum HelpText {
      * The Unsel.
      */
     UNSEL(
-            "unsel",
-            "Cancel selection: Make specified item(s) no longer selected.",
-            new String[]{
-                "unsel [index(es) (for the currently listed items) / module code(s) (for modules only)]",
-            },
-            new String[]{
-                "1. \"unsel 1 2 3\" >> make items with indices 1, 2and 3 no longer selected",
-                "2. \"unsel CS1010 CS2113\" >> make modules CS1010 and CS2113 no longer selected",
-                "2. \"unsel 5 CS2113\" >> make the item with index 5 and module CS2113 no longer selected"
-            }),
+        "unsel",
+        "Cancel selection: Make specified item(s) no longer selected.",
+        new String[]{
+            "unsel [index(es) (for the currently listed items) / module code(s) (for modules only)]",
+        },
+        new String[]{
+            "1. \"unsel 1 2 3\" >> make items with indices 1, 2and 3 no longer selected",
+            "2. \"unsel CS1010 CS2113\" >> make modules CS1010 and CS2113 no longer selected",
+            "2. \"unsel 5 CS2113\" >> make the item with index 5 and module CS2113 no longer selected"
+        }),
     /**
      * The Untake.
      */
     UNTAKE(
-            "untake",
-            "Untake module(s): Mark specified module(s) as not taken.",
-            new String[]{
-                "untake [index(es) / module code(s) (for modules only)]",
-            },
-            new String[]{
-                "1. \"untake\" >> if there is any module selected but not taken, mark it as not taken",
-                "2. \"untake 1 2\" >> mark module 1 and module 2 as not taken",
-                "3. \"untake CS2113T\" >> mark module CS2113T as not taken",
-                "4. \"untake 1 2 CS2113T\" >> mark module 1, module 2 and module CS2113T as not taken"
-            }),
-    ;
+        "untake",
+        "Untake module(s): Mark specified module(s) as not taken.",
+        new String[]{
+            "untake [index(es) / module code(s) (for modules only)]",
+        },
+        new String[]{
+            "1. \"untake\" >> if there is any module selected but not taken, mark it as not taken",
+            "2. \"untake 1 2\" >> mark module 1 and module 2 as not taken",
+            "3. \"untake CS2113T\" >> mark module CS2113T as not taken",
+            "4. \"untake 1 2 CS2113T\" >> mark module 1, module 2 and module CS2113T as not taken"
+        }),
+    VIEWTRASH(
+        "viewtrash",
+        "View trash bin",
+        new String[]{
+            "viewtrash",
+        },
+        new String[]{
+            "1.\"viewtrash\""
+        });
 
     /**
      * The Name.
